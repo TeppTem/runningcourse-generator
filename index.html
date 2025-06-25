@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Running Course Generator</title>
+    <script type="importmap">
+    {
+      "imports": {
+        "react": "https://esm.sh/react@^19.1.0",
+        "react-dom/": "https://esm.sh/react-dom@^19.1.0/",
+        "react/": "https://esm.sh/react@^19.1.0/"
+      }
+    }
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- 
+      VERY IMPORTANT FOR GOOGLE MAPS TO WORK:
+      1. The placeholder '{{GOOGLE_MAPS_API_KEY}}' in the <script> tag below
+         MUST be replaced with YOUR ACTUAL, VALID Google Maps JavaScript API key.
+      2. This key needs the "Maps JavaScript API" enabled in your Google Cloud Console project.
+      3. For local development, you can paste the key directly. 
+      4. For Vercel/production, this replacement should ideally be done during your 
+         build/deployment process, sourcing the key from an environment variable 
+         (e.g., Vercel environment variables and a build script to inject it).
+      5. To resolve TypeScript errors like "Cannot find namespace 'google'", 
+         you MUST install the Google Maps type definitions:
+         npm install --save-dev @types/google.maps
+         or
+         yarn add --dev @types/google.maps
+    -->
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key={{GOOGLE_MAPS_API_KEY}}&libraries=geometry,places"></script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body>
+    <div id="root"></div>
+    <script type="module" src="./index.tsx"></script>
+<script type="module" src="/index.tsx"></script>
+</body>
+</html>

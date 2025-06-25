@@ -1,0 +1,5 @@
+{
+  "name": "Running Course Generator",
+  "description": "A web application that generates custom running loop courses based on a user-defined start point and desired distance, utilizing Google Maps API for routing and elevation data.",
+  "requestFramePermissions": []
+}
